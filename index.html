@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,10 @@
 
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="imgage/png" sizes="32x32" href="./assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="imgage/png" sizes="32x32" href="./assets/favicons/Nfavicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/Nfavicon-16x16.png">
     <link rel="manifest" href="./assets/favicons/site.webmanifest">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="shortcut icon" href="assets/favicons/ProIcon.png">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -23,8 +24,50 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <style>
+        /* Disable Text Selection */
+        body {
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version */
+        }
+    </style>
+
+    <script>
+        // Disable Right Click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable F12 Key and Other Developer Tools Shortcut Keys
+        document.onkeydown = function (e) {
+            // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+            if (e.keyCode == 123 || 
+                (e.ctrlKey && e.shiftKey && (e.keyCode == 73 || e.keyCode == 74)) || 
+                (e.ctrlKey && e.keyCode == 85)) {
+                return false;
+            }
+        };
+
+        // Disable Inspect Element via Mouse/Keyboard
+        (function() {
+            var prohibitedKeys = [123, 73, 74, 85]; // F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+            document.onkeydown = function(event) {
+                if (prohibitedKeys.includes(event.keyCode) || (event.ctrlKey && event.shiftKey && (event.keyCode == 73 || event.keyCode == 74))) {
+                    event.preventDefault();
+                }
+            };
+
+            document.addEventListener('contextmenu', function(event) {
+                event.preventDefault();
+            });
+        })();
+    </script>
+
 
 </head>
+
 <body>
     <!-- Header -->
     <header class="header" id="header">
@@ -32,31 +75,31 @@
             <a href="#home" class="nav__logo ">Subhash Kumar</a>
 
             <div class="nav__menu">
-               <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="#home" class="nav__link">
-                        <i class='bx bx-home'></i>
-                    </a>
-                </li>
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class='bx bx-home'></i>
+                        </a>
+                    </li>
 
-                <li class="nav__item">
-                    <a href="#about" class="nav__link">
-                        <i class='bx bx-user'></i>
-                    </a>
-                </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class='bx bx-user'></i>
+                        </a>
+                    </li>
 
-                <li class="nav__item">
-                    <a href="#skills" class="nav__link">
-                        <i class='bx bx-book'></i>
-                    </a>
-                </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class='bx bx-book'></i>
+                        </a>
+                    </li>
 
-                <li class="nav__item">
-                    <a href="#contact" class="nav__link">
-                        <i class='bx bx-message-square-dots'></i>
-                    </a>
-                </li>
-               </ul>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class='bx bx-message-square-dots'></i>
+                        </a>
+                    </li>
+                </ul>
 
             </div>
 
@@ -64,7 +107,7 @@
             <!--=============== theme change button ===============-->
             <i class='bx bx-moon change-theme change-theme-button' id="theme-button"></i>
 
-        </nav>    
+        </nav>
     </header>
 
 
@@ -72,36 +115,12 @@
     <main class="main">
         <!--=============== HOME ===============-->
         <section class="home section" id="home">
-             <!-- <div class="home__container container grid">
-                <div class="home__data">
-                    <span class="home__greeting">Hello, I'm</span>
-                    <h1 class="home__name">Subhash Kumar</h1>
-                    <h3 class="home__education">Frontend Developer</h3> -->
- -
-                  <div class="home__button">
-                        <!-- <a download="" href="assets/pdf/hailee-Cv.pdf" class="button button--ghost">
-                            Download CV
-                        </a> -->
+            
+            <div class="home__button">
 
-                         
-                       <!-- <div class="nav-btn">
-                        <a href="#home" class="button">Home</a>
-                        <a href="#about" class="button">About</a>
-                        <a href="#about" class="button">Skills</a>
-                        <a href="#about" class="button">My Projects</a>
-                        <a href="#about" class="button">Contact Me</a>
-                    </div>
-                </div>
-                </div>  -->
-
-                <!-- <div class="home__handlel">
-                    <img src="assets/img/perfil.pn" alt="" class="home__img">
-                </div> -->
-
-
-               <div class="test1">
+                <div class="test1">
                     <div class="nav-btn">
-                        <a   href="./assets/Sk_Resume.pdf" class="button button--ghost" >
+                        <a href="./assets/Sk_Resume.pdf" class="button button--ghost">
                             View CV
                         </a>
                         <!-- <a href="#home" class="button">Home</a>
@@ -109,375 +128,376 @@
                         <a href="#skills" class="button">Skills</a>
                         <a href="#work" class="button">Projects</a>
                         <a href="#contact" class="button">Contact Me</a>
+                    </div>
                 </div>
-            </div>
 
 
 
 
-                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/subhash-kumar-1406b6220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="home__social-link">
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/subhash-kumar-1406b6220?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                        target="_blank" class="home__social-link">
                         <i class='bx bxl-linkedin'></i>
                     </a>
-               
+
                     <a href="https://github.com/subhash-kr0" target="_blank" class="home__social-link">
                         <i class='bx bxl-github'></i>
                     </a>
-                
+
                     <a href="https://www.instagram.com/subhash_k0/?hl=en" target="_blank" class="home__social-link">
                         <i class='bx bxl-instagram'></i>
                     </a>
-                    <a href="https://x.com/subhash_k0?t=Mqjf707CpKBIM5S2ITqirg&s=09" target="_blank" class="home__social-link">
+                    <a href="https://x.com/subhash_k0?t=Mqjf707CpKBIM5S2ITqirg&s=09" target="_blank"
+                        class="home__social-link">
                         <i class='bx bxl-twitter'></i>
                     </a>
-               </div>
+                </div>
             </div>
-        </section>    
-    </div>
+        </section>
+        </div>
         </section>
 
         <!-- ABOUT -->
-        
-        <!-- <section class="about section" id="about"> -->
-            <!-- <span class="section__subtitle">Hello, I'm</span>
-            <h2 class="section__title">Subhash Kumar</h2> -->
-            
-            <section class="about section" id="about">
-                <div class="home__container container grid">
-                    <div class="home__data">
-                        <span class="home__greeting">Hello, I'm</span>
-                        <h1 class="home__name">Subhash Kumar</h1>
-                        <h3 class="home__education">Software Developer</h3>
-       
-           
-            <div class="about__container container grid">
-                
-                <img src="assets/img/proPic.jpg" alt="" class="about__img" >
 
-                <div class="about__data">
-                    <div class="about__info">
-                        <div class="about__box">
-                        <i class='bx bx-award about__icon'></i>
-                        <h3 class="about__title">B.Tech</h3>
-                        <span class="about__subtitle">Computer Science</span>
 
-                    </div>
-                    <div class="about__box">
-                        <i class='bx bx-award about__icon'></i>
-                            <h3 class="about__title">Data Science course</h3>
-                            <span class="about__subtitle">PW Skills</span>
-                    </div>
-                    <div class="about__box">
-                        <i class='bx bx-award about__icon'></i>
-                        <h3 class="about__title">Java and System Design</h3>
-                        <span class="about__subtitle">PW Skills</span>
-                    </div>
-                    <div class="about__box">
-                        <i class='bx bxl-dev-to about__icon'></i>
-                        <h3 class="about__title">BlockChain Development</h3>
-                        <span class="about__subtitle">Self Study</span>
-                    </div>
-                    <div class="about__box">
-                        <i class='bx bxl-dev-to about__icon'></i>
-                        <h3 class="about__title">DevOps</h3>
-                        <span class="about__subtitle">Self Study</span>
-                    </div>
-                   <div class="about__box"><a href="">
-                        <i class='bx bx-certification about__icon' ></i>
-                        <h3 class="about__title">Certificates</h3>
-                        <span class="about__subtitle">Click to view</span></a> 
-                    </div>
-                    
-                </div>
 
-                <p class="about__description">
-                    Full Stack Developer. I create web pages with UI / UX user interfaces,
-                    I am a creative person who likes to create new things and learn new technologies.
+        <section class="about section" id="about">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, I'm</span>
+                    <h1 class="home__name">Subhash Kumar</h1>
+                    <h3 class="home__education">Software Developer || Data Scientist</h3>
 
-                </p>
 
-                <a href="#contact" class="button about__button-contact">Contact Me</a>
+                    <div class="about__container container grid">
 
-                </div>
-            </div>
+                        <img src="assets/img/proPic.jpg" alt="" class="about__img">
+
+                        <div class="about__data">
+                            <div class="about__info">
+                                <div class="about__box">
+                                    <i class='bx bx-award about__icon'></i>
+                                    <h3 class="about__title">B.Tech</h3>
+                                    <span class="about__subtitle">Computer Science</span>
+
+                                </div>
+                                <div class="about__box">
+                                    <i class='bx bx-award about__icon'></i>
+                                    <h3 class="about__title">Data Science course</h3>
+                                    <span class="about__subtitle">PW Skills</span>
+                                </div>
+                                <div class="about__box">
+                                    <i class='bx bx-award about__icon'></i>
+                                    <h3 class="about__title">Java and System Design</h3>
+                                    <span class="about__subtitle">PW Skills</span>
+                                </div>
+                                <div class="about__box">
+                                    <i class='bx bxl-dev-to about__icon'></i>
+                                    <h3 class="about__title">BlockChain Development</h3>
+                                    <span class="about__subtitle">Self Study</span>
+                                </div>
+                                <div class="about__box">
+                                    <i class='bx bxl-dev-to about__icon'></i>
+                                    <h3 class="about__title">DevOps</h3>
+                                    <span class="about__subtitle">Self Study</span>
+                                </div>
+                                <div class="about__box"><a href="">
+                                        <i class='bx bx-certification about__icon'></i>
+                                        <h3 class="about__title">Certificates</h3>
+                                        <span class="about__subtitle">Click to view</span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <p class="about__description">
+                                Full Stack Developer. I create web pages with UI / UX user interfaces,
+                                I am a creative person who likes to create new things and learn new technologies.
+
+                            </p>
+
+                            <a href="#contact" class="button about__button-contact">Contact Me</a>
+
+                        </div>
+                    </div>
 
         </section>
 
-                <!--=============== SKILLS ===============-->
-                <section class="skills section" id="skills">
-                    <span class="section__subtitle">My Abilities</span>
-                    <h2 class="section__title">My Experience</h2>
-        
-                    <div class="skills__container container grid">
-                        <div class="skills__content">
-                            <h3 class="skills__title">Frontend Development</h3>
-        
-                            <div class="skills__box">
-                                <div class="skills__group">
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">HTML</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">CSS/SCSS</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">Javascript</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                </div>
-                                <div class="skills__group">
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">Bootstrap</h3>
-                                            <span class="skills__level">Intermediate</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">Git</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">React</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
+        <!--=============== SKILLS ===============-->
+        <section class="skills section" id="skills">
+            <span class="section__subtitle">My Abilities</span>
+            <h2 class="section__title">My Experience</h2>
+
+            <div class="skills__container container grid">
+                <div class="skills__content">
+                    <h3 class="skills__title">Frontend Development</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">HTML</h3>
+                                    <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">CSS/SCSS</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Javascript</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
                         </div>
-        
-                        <div class="skills__content">
-                            <h3 class="skills__title">Backend Development</h3>
-        
-                            <div class="skills__box">
-                                <div class="skills__group">
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">Node JS</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">Python</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">MySQL</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                </div>
-                                <div class="skills__group">
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">PHP</h3>
-                                            <span class="skills__level">Intermediate</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">Firebase</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
-                                    <div class="skills__data">
-                                        <i class='bx bxs-badge-check'></i>
-        
-                                        <div>
-                                            <h3 class="skills__name">Mongo DB</h3>
-                                            <span class="skills__level">Advanced</span>
-                                        </div>
-                                    </div>
-        
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Bootstrap</h3>
+                                    <span class="skills__level">Intermediate</span>
                                 </div>
                             </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Git</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">React</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
+                </div>
 
-                        <!--=============== SKILLS ===============-->
-             
-        
-                
-                            <div class="skills__container container grid">
-                                <div class="skills__content">
-                                    <h3 class="skills__title">Blochain Developer</h3>
-                
-                                    <div class="skills__box">
-                                        <div class="skills__group">
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Solidity</h3>
-                                                    <span class="skills__level">Advanced</span>
-                                                </div>
-                                            </div>
-                
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Smart Contracts</h3>
-                                                    <span class="skills__level">Advanced</span>
-                                                </div>
-                                            </div>
-                
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Javascript</h3>
-                                                    <span class="skills__level">Advanced</span>
-                                                </div>
-                                            </div>
-                
-                                        </div>
-                                        <div class="skills__group">
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Full Stack development</h3>
-                                                    <span class="skills__level">Intermediate</span>
-                                                </div>
-                                            </div>
-                
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Web3</h3>
-                                                    <span class="skills__level">Intermediate</span>
-                                                </div>
-                                            </div>
-                
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Next JS</h3>
-                                                    <span class="skills__level">Intermediate</span>
-                                                </div>
-                                            </div>
-                
-                                        </div>
-                                    </div>
-                                </div>
-                
-                                <div class="skills__content">
-                                    <h3 class="skills__title">Data Science</h3>
-                
-                                    <div class="skills__box">
-                                        <div class="skills__group">
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Python</h3>
-                                                    <span class="skills__level">Advanced</span>
-                                                </div>
-                                            </div>
-                
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Hadoop</h3>
-                                                    <span class="skills__level">Intermediate</span>
-                                                </div>
-                                            </div>
-                
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">SQL</h3>
-                                                    <span class="skills__level">Advanced</span>
-                                                </div>
-                                            </div>
-                
-                                        </div>
-                                        <div class="skills__group">
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">DSA</h3>
-                                                    <span class="skills__level">Intermediate</span>
-                                                </div>
-                                            </div>
-                
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Machine Learning</h3>
-                                                    <span class="skills__level">Advanced</span>
-                                                </div>
-                                            </div>
-                
-                                            <div class="skills__data">
-                                                <i class='bx bxs-badge-check'></i>
-                
-                                                <div>
-                                                    <h3 class="skills__name">Big Data</h3>
-                                                    <span class="skills__level">Intermediate</span>
-                                                </div>
-                                            </div>
-                
-                                        </div>
-                                    </div>
+                <div class="skills__content">
+                    <h3 class="skills__title">Backend Development</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Node JS</h3>
+                                    <span class="skills__level">Advanced</span>
                                 </div>
                             </div>
-                </section>
 
-                
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Python</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">MySQL</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">PHP</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Firebase</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Mongo DB</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    <!--=============== SKILLS ===============-->
+
+
+
+            <div class="skills__container container grid">
+                <div class="skills__content">
+                    <h3 class="skills__title">Blochain Developer</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Solidity</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Smart Contracts</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Javascript</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Full Stack development</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Web3</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Next JS</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills__content">
+                    <h3 class="skills__title">Data Science</h3>
+
+                    <div class="skills__box">
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Python</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Hadoop</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">SQL</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="skills__group">
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">DSA</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Machine Learning</h3>
+                                    <span class="skills__level">Advanced</span>
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <i class='bx bxs-badge-check'></i>
+
+                                <div>
+                                    <h3 class="skills__name">Big Data</h3>
+                                    <span class="skills__level">Intermediate</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!--=============== SERVICES ===============-->
         <section class="services section">
             <span class="section__subtitle">My Best</span>
@@ -907,48 +927,49 @@
             </div>
         </section>
 
-        <!--=============== TESTIMONIALS ===============-->
+        <!--=============== REPOSITORIES ===============-->
         <section class="testimonial section">
-            <span class="section__subtitle">My clients say</span>
-            <h2 class="section__title">Testimonials</h2>
+            <span class="section__subtitle">My helpfull</span>
+            <h2 class="section__title">Repositories</h2>
 
             <div class="testimonial__container container swiper">
                 <div class="swiper-wrapper">
                     <div class="testimonial__card swiper-slide">
-                        <img src="assets/img/testimonial1.png" alt="" class="testimonial__img">
+                        <img src="assets/img/gif.gif" alt="" class="testimonial__img">
 
-                        <h3 class="testimonial__name">Jhon Doe</h3>
+                        <h3 class="testimonial__name"><a href="https://github.com/subhash-kr0/Data-Science-Master">Data
+                                Science Master</a></h3>
                         <p class="testimonial__description">
-                            A really good job, all aspects of the project were done well.
-                            Very creative and thoughtful. I was very impressed and would recommend this to anyone.
+                            Embark on a transformative journey with us and unlock the power of data. Our course is
+                            designed to provide you deep insights into the world of data science.
                         </p>
                     </div>
 
                     <div class="testimonial__card swiper-slide">
-                        <img src="assets/img/testimonial2.png" alt="" class="testimonial__img">
+                        <img src="assets/img/gif.gif" alt="" class="testimonial__img">
 
-                        <h3 class="testimonial__name">Ada Hill</h3>
+                        <h3 class="testimonial__name"><a href="https://github.com/subhash-kr0/DSA-in-Python">DSA in Python</a></h3>
                         <p class="testimonial__description">
-                            A really good job, all aspects of the project were done well.
-                            Very creative and thoughtful. I was very impressed and would recommend this to anyone.
+                            This Repository Help you to Learn DSA in Python.
+                            Everything is cover here and all resources is Provided in this Repository.
                         </p>
                     </div>
 
                     <div class="testimonial__card swiper-slide">
-                        <img src="assets/img/testimonial3.png" alt="" class="testimonial__img">
+                        <img src="assets/img/gif.gif" alt="" class="testimonial__img">
 
-                        <h3 class="testimonial__name">Jessica Park</h3>
+                        <h3 class="testimonial__name"><a href="https://github.com/subhash-kr0/BlockChain-Development">BlockChain Development</a></h3>
                         <p class="testimonial__description">
-                            A really good job, all aspects of the project were done well.
-                            Very creative and thoughtful. I was very impressed and would recommend this to anyone.
+                            Welcome to the Blockchain Development Repository, a comprehensive guide to mastering blockchain technology!
+                            
                         </p>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
 
-        </section> 
-    
+        </section>
+
         <!--=============== CONTACT ===============-->
         <section class="contact section" id="contact">
             <sapn class="section__subtitle">Get in touch</sapn>
@@ -974,8 +995,7 @@
                             <h3 class="contact__card-title">Telegram</h3>
                             <span class="contact__card-data">@subhash_k0</span>
 
-                            <a href="https://@subhash_k0.t.me/" target="_blank"
-                                class="contact__button">
+                            <a href="https://@subhash_k0.t.me/" target="_blank" class="contact__button">
                                 Write Me <i class='bx bx-right-arrow contact__button-icon'></i>
                             </a>
                         </div>
@@ -1024,9 +1044,9 @@
         </section>
     </main>
 
-  
-      <!--=============== FOOTER ===============-->
-      <footer class="footer">
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer">
         <div class="footer__container container">
             <h1 class="footer__title">Subhash Kumar</h1>
 
@@ -1069,19 +1089,19 @@
                     <a href="#" target="_blank" class="footer__social-link">
                         <i class='bx bxl-instagram footer__social-icon'></i>
                     </a>
-                    
+
                 </li>
                 <li class="footer__social-item">
                     <a href="#" target="_blank" class="footer__social-link">
                         <i class='bx bxl-telegram footer__social-icon'></i>
                     </a>
-                    
+
                 </li>
                 <li class="footer__social-item">
                     <a href="#" target="_blank" class="footer__social-link">
                         <i class='bx bxl-github footer__social-icon'></i>
                     </a>
-                    
+
                 </li>
             </ul>
 
@@ -1105,4 +1125,5 @@
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

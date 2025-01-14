@@ -1024,6 +1024,54 @@ body.light-theme {
   }
 }
 
+
+
+
+
+
+
+
+/* Mobile-specific layout for 2-column design */
+@media screen and (max-width: 630px) {
+  .services__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    gap: 15px; /* Space between columns */
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .services__box {
+    padding: 1rem;
+    text-align: center;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+}
+
+/* Desktop layout adjustments */
+@media screen and (min-width: 630px) {
+  .services__container {
+    grid-template-columns: repeat(3, 177px);
+    justify-content: center;
+  }
+
+  .services__box {
+    padding: 1.75rem 0.95rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 /* For medium devices */
 @media screen and (min-width: 630px) {
   .nav__menu {
